@@ -19,11 +19,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'zf6=mdmhjx$2iefr^b_p7aff&!ke03x$e1fs)iw8*i52uv^yn!'
+#SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'zf6=mdmhjx$2iefr^b_p7aff&!ke03x$e1fs)iw8*i52uv^yn!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['crivit.com.ua','www.crivit.com.ua']
 
@@ -81,7 +81,7 @@ DATABASES = {
   'ENGINE': 'django.db.backends.postgresql_psycopg2',
   'NAME': 'wledrfgo_LOL',
   'USER': 'wledrfgo_admin12332145',
-  'PASSWORD': 'WEWsZPoTkALc'
+  'PASSWORD': 'WEWsZPoTkALc',
   'HOST': 'localhost',
   'PORT': '5432',
   }
