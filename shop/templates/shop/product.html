@@ -1,0 +1,18 @@
+{% extends 'web/main.html' %}
+
+{% block title_page %}
+	<title>{{ product.name }}</title>
+{% endblock title_page %}
+
+{% load static %}
+
+ {% block content %}
+ <div class="container" style="padding-bottom: 40px;">
+	<h2 style="padding-bottom: 40px;">{{ product.name }}</h2>
+	
+	<img src="{{ product.image.url }}" align="left" style="width: 700px;">
+
+	<p>{{ product.description|safe|linebreaks }}</p>
+	<p style="padding-top: 30px; font-size: 30px;"> Цена: {{ product.price }} грн </p>
+</div>
+ {% endblock %}
