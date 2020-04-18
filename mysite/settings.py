@@ -13,8 +13,11 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = 'web/static'
+STATICFILES_DIRS = (
+os.path.join(BASE_DIR, 'static'),
+)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -25,7 +28,7 @@ SECRET_KEY = 'zf6=mdmhjx$2iefr^b_p7aff&!ke03x$e1fs)iw8*i52uv^yn!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['crivit.com.ua','www.crivit.com.ua']
+ALLOWED_HOSTS = ['127.0.0.1','*', 'localhost']
 
 
 # Application definition
@@ -77,14 +80,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-  'default': {
-  'ENGINE': 'django.db.backends.postgresql_psycopg2',
-  'NAME': 'wledrfgo_LOL',
-  'USER': 'wledrfgo_admin12332145',
-  'PASSWORD': 'WEWsZPoTkALc',
-  'HOST': 'localhost',
-  'PORT': '5432',
-  }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
 
 
